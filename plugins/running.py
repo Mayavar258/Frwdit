@@ -46,7 +46,7 @@ async def run(bot, message):
                 message_id=message.message_id
             )
             files_count += 1
-            await asyncio.sleep(1)
+            await asyncio.sleep(0.3)
         except FloodWait as e:
             await asyncio.sleep(e.x)
             await bot.copy_message(
@@ -57,7 +57,7 @@ async def run(bot, message):
                 message_id=message.message_id
             )
             files_count += 1
-            await asyncio.sleep(1)
+            await asyncio.sleep(0.3)
         except Exception as e:
             print(e)
             pass
